@@ -2,6 +2,41 @@ var parser = require('./address');
 var assert = require('assert');
 
 var address = {
+    '2B State Road 344, Edgewood, NM 87015': {
+      number: '2B',
+      street: 'State Road 344',
+      city: 'Edgewood',
+      state: 'NM',
+      zip: '87015'
+    },
+    '7628A E Indian School Rd, Scottsdale, AZ 85251': {
+      number: '7628A',
+      street: 'Indian School',
+      type: 'Rd',
+      prefix: 'E',
+      city: 'Scottsdale',
+      state: 'AZ',
+      zip: '85251'
+    },
+    '4775 Whitman Ln SE, Lacey, WA 98513': {
+      number: '4775',
+      street: 'Whitman',
+      type: 'Ln',
+      suffix: 'SE',
+      city: 'Lacey',
+      state: 'WA',
+      zip: '98513'
+    },
+    '930 Old Steese Hwy Ste A, Fairbanks, AK 99701': {
+      number: '930',
+      street: 'Old Steese',
+      type: 'Hwy',
+      sec_unit_type: 'Ste',
+      sec_unit_num: 'A',
+      city: 'Fairbanks',
+      state: 'AK',
+      zip: '99701'
+    },
     '920 Houston Northcutt Boulevard Suite N, MT. PLEASANT, SC 29464': {
       number: '920',
       street: 'Houston Northcutt',
@@ -200,8 +235,7 @@ var address = {
     state: 'DC'
   },
   '48S 400E, Salt Lake City UT': {
-    number: '48',
-    prefix: 'S',
+    number: '48S',
     street: '400',
     suffix: 'E',
     city: 'Salt Lake City',
