@@ -588,7 +588,7 @@
         |pe?n?t?ho?u?s?e?                             \n\
         |rear                                         \n\
         |side                                         \n\
-        |[0-9][a-z]                                   \n\
+        |[0-9]+[a-z]                                  \n\
       )\\b';
 
     Addr_Match.sec_unit = '                               \n\

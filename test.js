@@ -2,6 +2,16 @@ var parser = require('./address');
 var assert = require('assert');
 
 var address = {
+    '4349 North Neva Avenue, 123B, Norridge, IL 60706': {
+      number: '4349',
+      prefix: "N",
+      street: 'Neva',
+      sec_unit_type: '123B',
+      type: 'Ave',
+      city: 'Norridge',
+      state: 'IL',
+      zip: '60706'
+    },
     '1501 E Parks Hwy\n Wasilla, AK 99654': {
       number: '1501',
       prefix: 'E',
