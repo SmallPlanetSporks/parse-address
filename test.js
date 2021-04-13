@@ -2,6 +2,16 @@ var parser = require('./address');
 var assert = require('assert');
 
 var address = {
+    '920 Houston Northcutt Boulevard Suite N, MT. PLEASANT, SC 29464': {
+      number: '920',
+      street: 'Houston Northcutt',
+      type: 'Blvd',
+      sec_unit_type: 'Suite',
+      sec_unit_num: 'N',
+      city: 'MT PLEASANT',
+      state: 'SC',
+      zip: '29464'
+    },
     '3618 Highway 138, SE, Stockbridge, GA 30281': {
       number: '3618',
       street: 'Highway 138',
