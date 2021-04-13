@@ -2,6 +2,41 @@ var parser = require('./address');
 var assert = require('assert');
 
 var address = {
+    '3618 Highway 138, SE, Stockbridge, GA 30281': {
+      number: '3618',
+      street: 'Highway 138',
+      suffix: 'SE',
+      city: 'Stockbridge',
+      state: 'GA',
+      zip: '30281'
+    },
+    '1955 Henderson Rd, Upper Arlington, OH 43220': {
+      number: '1955',
+      street: 'Henderson',
+      type: 'Rd',
+      city: 'Upper Arlington',
+      state: 'OH',
+      zip: '43220'
+    },
+    '107 E Walnut St, West Union, OH 45693': {
+      number: '107',
+      prefix: "E",
+      street: 'Walnut',
+      type: 'St',
+      city: 'West Union',
+      state: 'OH',
+      zip: '45693'
+    },
+    '4349 North Neva Avenue, 1B, Norridge, IL 60706': {
+      number: '4349',
+      prefix: "N",
+      street: 'Neva',
+      sec_unit_type: '1B',
+      type: 'Ave',
+      city: 'Norridge',
+      state: 'IL',
+      zip: '60706'
+    },
   '1005 Gravenstein Hwy 95472': {
     number: '1005',
     street: 'Gravenstein',

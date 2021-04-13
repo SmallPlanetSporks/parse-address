@@ -584,12 +584,11 @@
       (?<sec_unit_type_2>ba?se?me?n?t                 \n\
         |fro?nt                                       \n\
         |lo?bby                                       \n\
-        |lowe?r                                       \n\
         |off?i?ce?                                    \n\
         |pe?n?t?ho?u?s?e?                             \n\
         |rear                                         \n\
         |side                                         \n\
-        |uppe?r                                       \n\
+        |[0-9][a-z]                                   \n\
       )\\b';
 
     Addr_Match.sec_unit = '                               \n\
@@ -705,6 +704,16 @@
   };
   parser.parseLocation = function(address){
     lazyInit();
+    
+    // Seems to only work better if there are at most two commas
+    // street, city, state
+    var parts = address.split(",")
+    if (parts.length > 3) {
+        var first = parts.slice(0,parts.length-3).join("")
+        var second = parts.slice(parts.length-3, parts.length).join(",")
+        address = first + second;
+    }
+    
     if (XRegExp(Addr_Match.corner,'xi').test(address)) {
         return parser.parseIntersection(address);
     }
