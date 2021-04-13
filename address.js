@@ -705,6 +705,9 @@
   parser.parseLocation = function(address){
     lazyInit();
     
+    // Parsing works better if new lines are commas...
+    address = address.replace("\n", ",");
+    
     // Seems to only work better if there are at most two commas
     // street, city, state
     var parts = address.split(",")

@@ -2,6 +2,22 @@ var parser = require('./address');
 var assert = require('assert');
 
 var address = {
+    '1501 E Parks Hwy\n Wasilla, AK 99654': {
+      number: '1501',
+      prefix: 'E',
+      street: 'Parks',
+      type: 'Hwy',
+      city: 'Wasilla',
+      state: 'AK',
+      zip: '99654'
+    },
+    '2B State Road 344\nEdgewood, NM 87015': {
+      number: '2B',
+      street: 'State Road 344',
+      city: 'Edgewood',
+      state: 'NM',
+      zip: '87015'
+    },
     '2B State Road 344, Edgewood, NM 87015': {
       number: '2B',
       street: 'State Road 344',
